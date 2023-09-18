@@ -1,0 +1,51 @@
+*{
+    background-color: rgb(58, 194, 58);
+    /* font-size: 16px; */
+}
+
+header{
+height: 7rem;
+}
+
+body{
+    max-width: 52rem;
+
+}
+
+.nav-a{
+    border: 2px;
+    padding: 0.6rem;
+    border-radius: 3rem;
+}
+.nav-a-item{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer{
+
+    border-radius: 1rem;
+    padding: 2rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    background-color: aquamarine;
+}
+
+.grid-image{
+    width: 10rem;
+}
+
+.brand{
+    font-size: 2em;
+}
+li{
+    list-style-type: number;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,150px); 
+    grid-template-rows: repeat(3,150px); 
+    grid-gap:50px 30px;
+}
