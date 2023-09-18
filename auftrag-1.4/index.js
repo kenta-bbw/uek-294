@@ -2,7 +2,7 @@ const fizzbuzzButton = document.getElementById("fizzbuzzButton");
 const outputDiv = document.getElementById("output");
 
 const Fizzbuzz = () => {
-  let outputText = ""; 
+  var outputText = ""; 
 
   for (let i = 1; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
