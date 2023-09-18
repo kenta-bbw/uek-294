@@ -11,9 +11,9 @@ const regionen = document.getElementsByClassName('voy-regionName');
 console.log(regionen.length)
 
 
-var natureName = document.querySelectorAll('[data-group="nature"], .p-name');
-natureName.forEach(function(element) {
-  console.log(element.textContent);
+var natureName = document.querySelectorAll('[data-group="nature"] .p-name');
+natureName.forEach(function(pName) {
+  console.log(pName.textContent);
 });
 
 console.log(natureName)
