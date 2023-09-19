@@ -1,0 +1,47 @@
+.card.revealed img, .tile.found img {
+    margin: 1rem auto;
+    display: block;
+}
+
+.card img {
+    display: none;
+}
+
+.card.revealed, .tile.found {
+    background-color: white;
+    background-image: none;
+}
+  
+.card {
+  height: 8rem;
+  width: 8rem;
+  background-color: #878c00;
+  background-image: url("https://www.transparenttextures.com/patterns/argyle.png");
+}
+
+div{
+    display: flex;
+    justify-content: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+
+#playground {
+    display: grid;
+    grid-template-columns: repeat(6,150px); 
+    grid-template-rows: repeat(4,150px); 
+    grid-gap:15px;
+  }
+  
+.won {
+  opacity: 0.5;
+  position: relative;
+}
+  
+.won .won-text {
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center
+}

@@ -108,22 +108,3 @@ li{
     grid-template-rows: repeat(3,150px); 
     grid-gap:50px 30px;
 }
-
-
-.grid-image{
-    width: 10rem;
-}
-
-.brand{
-    font-size: 2em;
-}
-li{
-    list-style-type: number;
-}
-
-.grid{
-    display: grid;
-    grid-template-columns: repeat(3,150px); 
-    grid-template-rows: repeat(3,150px); 
-    grid-gap:50px 30px;
-}
