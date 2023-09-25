@@ -1,0 +1,18 @@
+#objekt {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition: width 1s linear, background-color 0.5s ease-in-out;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+  #objekt.animate {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    top: 100px;
+    left: 100px;
+  }
+
+  
