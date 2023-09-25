@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lehrvertrag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Lehrvertrag</h1>
+        <form id="lehrvertragForm">
+            <div class="form-group">
+                <label for="lehrbetrieb">Lehrbetrieb:</label>
+                <input type="text" id="lehrbetrieb" name="lehrbetrieb" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lehrberuf">Lehrberuf:</label>
+                <input type="text" id="lehrberuf" name="lehrberuf" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ausbildungsbeginn">Ausbildungsbeginn:</label>
+                <input type="date" id="ausbildungsbeginn" name="ausbildungsbeginn" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ausbildungsende">Ausbildungsende:</label>
+                <input type="date" id="ausbildungsende" name="ausbildungsende" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lehrjahr">Lehrjahr:</label>
+                <select id="lehrjahr" name="lehrjahr">
+                    <option value="1">1. Lehrjahr</option>
+                    <option value="2">2. Lehrjahr</option>
+                    <option value="3">3. Lehrjahr</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="arbeitszeit">Arbeitszeiten:</label>
+                <input type="text" id="arbeitszeit" name="arbeitszeit" required>
+            </div>
+
+            <div class="form-group">
+                <label for="arbeitsort">Arbeitsort:</label>
+                <input type="text" id="arbeitsort" name="arbeitsort" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ziele-und-inhalte">Ausbildungsziele und -inhalte:</label>
+                <textarea id="ziele-und-inhalte" name="ziele-und-inhalte" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="ausbilder">Ausbilder:</label>
+                <input type="text" id="ausbilder" name="ausbilder" required>
+            </div>
+
+            <div class="form-group">
+                <label for="verguetung">Vergütung:</label>
+                <input type="text" id="verguetung" name="verguetung" required>
+            </div>
+
+            <div class="form-group">
+                <label for="sozialleistungen">Sozialleistungen:</label>
+                <input type="text" id="sozialleistungen" name="sozialleistungen" required>
+            </div>
+
+            <div class="form-group">
+                <label for="kuendigungsbedingungen">Kündigungsbedingungen:</label>
+                <input type="text" id="kuendigungsbedingungen" name="kuendigungsbedingungen" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ausbildungsordnung">Ausbildungsordnung:</label>
+                <input type="text" id="ausbildungsordnung" name="ausbildungsordnung" required>
+            </div>
+
+            <div class="form-group">
+                <label for="unterschriften">Unterschriften:</label>
+                <input type="text" id="unterschriften" name="unterschriften" required>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Absenden">
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
