@@ -1,65 +1,69 @@
-
 body {
     font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
 }
 
-.container {
-    max-width: 600px;
-    margin: 0 auto;
+form {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px; /* Reduced the max-width for a more compact form */
+    margin: 0 auto;
     padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
-    color: #007bff;
-}
-
-.form-group {
+fieldset {
     margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+legend {
+    font-weight: bold;
 }
 
 label {
-    font-weight: bold;
-    color: #333;
+    display: block;
+    margin-bottom: 5px;
 }
 
 input[type="text"],
+input[type="email"],
+input[type="tel"],
 input[type="date"],
-select,
 textarea {
-    width: 100%;
+    width: 95%; /* Fields now take up the full width of the form */
     padding: 10px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 4px;
 }
 
-select {
-    height: 36px;
-}
-
-textarea {
-    resize: vertical;
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
 }
 
 input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#validate {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-input[type="submit"]:hover {
-    background-color: #0056b3;
 }

@@ -1,95 +1,337 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lehrvertrag</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <title>Apprenticeship Agreement Form</title>
 </head>
-
 <body>
-    <div class="container">
-        <h1>Lehrvertrag</h1>
-        <form id="lehrvertragForm">
-            <div class="form-group">
-                <label for="lehrbetrieb">Lehrbetrieb:</label>
-                <input type="text" id="lehrbetrieb" name="lehrbetrieb" required>
-            </div>
+    <form action="submit_form.php" method="post">
 
-            <div class="form-group">
-                <label for="lehrberuf">Lehrberuf:</label>
-                <input type="text" id="lehrberuf" name="lehrberuf" required>
-            </div>
-
-            <div class="form-group">
-                <label for="ausbildungsbeginn">Ausbildungsbeginn:</label>
-                <input type="date" id="ausbildungsbeginn" name="ausbildungsbeginn" required>
-            </div>
-
-            <div class="form-group">
-                <label for="ausbildungsende">Ausbildungsende:</label>
-                <input type="date" id="ausbildungsende" name="ausbildungsende" required>
-            </div>
-
-            <div class="form-group">
-                <label for="lehrjahr">Lehrjahr:</label>
-                <select id="lehrjahr" name="lehrjahr">
-                    <option value="1">1. Lehrjahr</option>
-                    <option value="2">2. Lehrjahr</option>
-                    <option value="3">3. Lehrjahr</option>
-                </select>
-            </div>
-
-            <div class="form-group">
-                <label for="arbeitszeit">Arbeitszeiten:</label>
-                <input type="text" id="arbeitszeit" name="arbeitszeit" required>
-            </div>
-
-            <div class="form-group">
-                <label for="arbeitsort">Arbeitsort:</label>
-                <input type="text" id="arbeitsort" name="arbeitsort" required>
-            </div>
-
-            <div class="form-group">
-                <label for="ziele-und-inhalte">Ausbildungsziele und -inhalte:</label>
-                <textarea id="ziele-und-inhalte" name="ziele-und-inhalte" required></textarea>
-            </div>
-
-            <div class="form-group">
-                <label for="ausbilder">Ausbilder:</label>
-                <input type="text" id="ausbilder" name="ausbilder" required>
-            </div>
-
-            <div class="form-group">
-                <label for="verguetung">Vergütung:</label>
-                <input type="text" id="verguetung" name="verguetung" required>
-            </div>
-
-            <div class="form-group">
-                <label for="sozialleistungen">Sozialleistungen:</label>
-                <input type="text" id="sozialleistungen" name="sozialleistungen" required>
-            </div>
-
-            <div class="form-group">
-                <label for="kuendigungsbedingungen">Kündigungsbedingungen:</label>
-                <input type="text" id="kuendigungsbedingungen" name="kuendigungsbedingungen" required>
-            </div>
-
-            <div class="form-group">
-                <label for="ausbildungsordnung">Ausbildungsordnung:</label>
-                <input type="text" id="ausbildungsordnung" name="ausbildungsordnung" required>
-            </div>
-
-            <div class="form-group">
-                <label for="unterschriften">Unterschriften:</label>
-                <input type="text" id="unterschriften" name="unterschriften" required>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Absenden">
-            </div>
-        </form>
-    </div>
+        <label for="lehrvertragsnummer">Lehrvertragsnummer:</label>
+        <input type="text" id="lehrvertragsnummer" name="lehrvertragsnummer">
+      
+    
+        <label for="lehrbetriebsnummer">Lehrbetriebsnummer:</label>
+        <input type="text" id="lehrbetriebsnummer" name="lehrbetriebsnummer">
+      
+        <fieldset>
+            <legend>Lehrbetrieb:</legend>
+            <label for="firma">Firma:</label>
+            <input type="text" id="firma" name="firma">
+          
+            <label for="firma-strasse">Strasse:</label>
+            <input type="text" id="firma-strasse" name="firma-strasse">
+          
+            <label for="firma-plz">PLZ:</label>
+            <input type="text" id="firma-plz" name="firma-plz">
+          
+            <label for="firma-ort">Ort:</label>
+            <input type="text" id="firma-ort" name="firma-ort">
+          
+            <label for="firma-tel">Tel:</label>
+            <input type="text" id="firma-tel" name="firma-tel">
+          
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+          </fieldset>      
+      
+    <!-- Lernende Person -->
+    <fieldset>
+        <legend>Lernende Person:</legend>
+        <label for="lernendeName">Name:</label>
+        <input type="text" id="lernende-name" name="lernende-name">
+      
+        <label for="lernendeVorname">Vorname:</label>
+        <input type="text" id="lernendeVorname" name="lernendeVorname">
+      
+        <label for="lernendeStrasse">Strasse:</label>
+        <input type="text" id="lernendeStrasse" name="lernendeStrasse">
+      
+        <label for="lernendePlz">PLZ:</label>
+        <input type="text" id="lernendePlz" name="lernendePlz">
+      
+        <label for="lernendeOrt">Ort:</label>
+        <input type="text" id="lernendeOrt" name="lernendeOrt">
+      
+        <label for="lernendeGeburtsdatum">Geburtsdatum:</label>
+        <input type="date" id="lernendeGeburtsdatum" name="lernendeGeburtsdatum">
+      
+        <label for="lernendeMuttersprache">Muttersprache:</label>
+        <input type="text" id="lernendeMuttersprache" name="lernendeMuttersprache">
+      
+        <label for="lernendeGeschlecht">Geschlecht:</label>
+        <input type="radio" id="lernendeGeschlecht_m" name="lernendeGeschlecht" value="Männlich">
+        <label for="lernendeGeschlecht_m">Männlich</label>
+        <input type="radio" id="lernendeGeschlecht_w" name="lernendeGeschlecht" value="Weiblich">
+        <label for="lernendeGeschlecht_w">Weiblich</label>
+      
+        <label for="lernedeTel">Tel:</label>
+        <input type="tel" id="lernedeTel" name="lernedeTel">
+      
+        <label for="lernendeMobile">Mobile:</label>
+        <input type="tel" id="lernendeMobile" name="lernendeMobile">
+      
+        <label for="lernendeEmail">E-Mail:</label>
+        <input type="email" id="lernendeEmail" name="lernendeEmail">
+      
+        <label for="lernendeHeimatsort">Heimatsort:</label>
+        <input type="text" id="lernendeHeimatsort" name="lernendeHeimatsort">
+      
+        <label for="lernendeKanton">Kanton:</label>
+        <input type="text" id="lernendeKanton" name="lernendeKanton">
+      
+        <label for="lernendeStaat">Staat:</label>
+        <input type="text" id="lernendeStaat" name="lernendeStaat">
+      
+        <label for="lernendeAhv_nr">AHV Nr.:</label>
+        <input type="text" id="lernendeAhv_nr" name="lernendeAhv_nr">
+      </fieldset>
+      
+      
+    <!-- Gesetzliche Vertretung -->
+    <fieldset>
+        <legend>Gesetzliche Vertretung:</legend>
+      
+        <label for="gesetzliche_vertretung_name">Name:</label>
+        <input type="text" id="gesetzliche_vertretung_name" name="gesetzliche_vertretung_name">
+      
+        <label for="gesetzliche_vertretung_vorname">Vorname:</label>
+        <input type="text" id="gesetzliche_vertretung_vorname" name="gesetzliche_vertretung_vorname">
+      
+        <label for="gesetzliche_vertretung_strasse">Strasse:</label>
+        <input type="text" id="gesetzliche_vertretung_strasse" name="gesetzliche_vertretung_strasse">
+      
+        <label for="gesetzliche_vertretung_plz">PLZ:</label>
+        <input type="text" id="gesetzliche_vertretung_plz" name="gesetzliche_vertretung_plz">
+      
+        <label for="gesetzliche_vertretung_ort">Ort:</label>
+        <input type="text" id="gesetzliche_vertretung_ort" name="gesetzliche_vertretung_ort">
+      
+        <label for="gesetzliche_vertretung_geschlecht">Geschlecht:</label>
+        <input type="radio" id="gesetzliche_vertretung_geschlecht_m" name="gesetzliche_vertretung_geschlecht" value="Männlich">
+        <label for="gesetzliche_vertretung_geschlecht_m">Männlich</label>
+        <input type="radio" id="gesetzliche_vertretung_geschlecht_w" name="gesetzliche_vertretung_geschlecht" value="Weiblich">
+        <label for="gesetzliche_vertretung_geschlecht_w">Weiblich</label>
+      
+        <label for="gesetzliche_vertretung_tel">Tel:</label>
+        <input type="tel" id="gesetzliche_vertretung_tel" name="gesetzliche_vertretung_tel">
+      </fieldset>
+      
+      
+    <!-- Berufsbezeichnung, Bildungsdauer Probezeit -->
+    <fieldset>
+        <legend>Berufsbezeichnung, Bildungsdauer Probezeit:</legend>
+      
+        <label for="berufsbezeichnung">Berufsbezeichnung:</label>
+        <input type="text" id="berufsbezeichnung" name="berufsbezeichnung">
+      
+        <label for="fachrichtung_profil">Fachrichtung + Profil:</label>
+        <input type="text" id="fachrichtung_profil" name="fachrichtung_profil">
+      
+        <label for="bildungsdauer_von">Bildungsdauer (von):</label>
+        <input type="date" id="bildungsdauer_von" name="bildungsdauer_von">
+      
+        <label for="bildungsdauer_bis">Bildungsdauer (bis):</label>
+        <input type="date" id="bildungsdauer_bis" name="bildungsdauer_bis">
+      
+        <label for="probezeit_dauer">Dauer der Probezeit:</label>
+        <input type="text" id="probezeit_dauer" name="probezeit_dauer">
+      </fieldset>
+      
+      
+    <!-- Angaben zum Lehrbetrieb und zur Berufsbildner/Berufsbildnerin -->
+    <fieldset>
+        <legend>Angaben zum Lehrbetrieb und zur Berufsbildner/Berufsbildnerin:</legend>
+      
+        <label for="lehrbetrieb_name">Name des Lehrbetriebs:</label>
+        <input type="text" id="lehrbetrieb_name" name="lehrbetrieb_name">
+      
+        <label for="lehrbetrieb_vorname">Vorname des Berufsbildners/Berufsbildnerin:</label>
+        <input type="text" id="lehrbetrieb_vorname" name="lehrbetrieb_vorname">
+      
+        <label for="beruf_des_berufsbildners">Beruf des Berufsbildners/Berufsbildnerin:</label>
+        <input type="text" id="beruf_des_berufsbildners" name="beruf_des_berufsbildners">
+      
+        <label for="geburtstag_des_berufsbildners">Geburtstag des Berufsbildners/Berufsbildnerin:</label>
+        <input type="date" id="geburtstag_des_berufsbildners" name="geburtstag_des_berufsbildners">
+      
+        <label for="anzahl_fachleute_im_betrieb">Anzahl der Fachleute im Betrieb:</label>
+        <input type="number" id="anzahl_fachleute_im_betrieb" name="anzahl_fachleute_im_betrieb">
+      
+        <label for="ausbildungsort">Ausbildungsort:</label>
+        <input type="text" id="ausbildungsort" name="ausbildungsort">
+      </fieldset>
+      
+      
+      <!-- Schulische Bildung und überbetriebliche Kurse -->
+    <fieldset>
+        <legend>Schulische Bildung und überbetriebliche Kurse:</legend>
+      
+        <label for="berufsfachschule">Berufsfachschule:</label>
+        <input type="text" id="berufsfachschule" name="berufsfachschule">
+      
+        <label for="unterrichtssprache">Unterrichtssprache:</label>
+        <input type="text" id="unterrichtssprache" name="unterrichtssprache">
+      
+        <label for="berufsmaturitaetsunterricht">Berufsmaturitätsunterricht:</label>
+        <input type="text" id="berufsmaturitaetsunterricht" name="berufsmaturitaetsunterricht">
+      
+        <label for="kosten_uebernehmen">Übernahme von Kosten:</label>
+        <input type="checkbox" id="reisespesen" name="reisespesen" value="Reisespesen">
+        <label for="reisespesen">Reisespesen</label>
+        <input type="checkbox" id="verpflegung" name="verpflegung" value="Verpflegung">
+        <label for="verpflegung">Verpflegung</label>
+        <input type="checkbox" id="unterkunft" name="unterkunft" value="Unterkunft">
+        <label for="unterkunft">Unterkunft</label>
+        <input type="checkbox" id="schulmaterial" name="schulmaterial" value="Schulmaterial">
+        <label for="schulmaterial">Schulmaterial</label>
+        <input type="checkbox" id="elektronische_geraete" name="elektronische_geraete" value="Elektronische Geräte">
+        <label for="elektronische_geraete">Elektronische Geräte</label>
+      
+        <label for="besondere_regelung">Besondere Regelung:</label>
+        <textarea id="besondere_regelung" name="besondere_regelung" rows="4"></textarea>
+      </fieldset>
+      
+      
+    <!-- Entschädigung -->
+    <fieldset>
+        <legend>Entschädigung:</legend>
+      
+        <label for="bruttolohn_1_bildungsjahr">Bruttolohn (1. Bildungsjahr):</label>
+        <input type="text" id="bruttolohn_1_bildungsjahr" name="bruttolohn_1_bildungsjahr">
+      
+        <label for="bruttolohn_2_bildungsjahr">Bruttolohn (2. Bildungsjahr):</label>
+        <input type="text" id="bruttolohn_2_bildungsjahr" name="bruttolohn_2_bildungsjahr">
+      
+        <label for="bruttolohn_3_bildungsjahr">Bruttolohn (3. Bildungsjahr):</label>
+        <input type="text" id="bruttolohn_3_bildungsjahr" name="bruttolohn_3_bildungsjahr">
+      
+        <label for="bruttolohn_4_bildungsjahr">Bruttolohn (4. Bildungsjahr):</label>
+        <input type="text" id="bruttolohn_4_bildungsjahr" name="bruttolohn_4_bildungsjahr">
+      
+        <label for="monatslohn_13">13. Monatslohn:</label>
+        <input type="text" id="monatslohn_13" name="monatslohn_13">
+      </fieldset>
+      
+      
+    <!-- Arbeitszeit -->
+    <fieldset>
+        <legend>Arbeitszeit:</legend>
+      
+        <label for="stunden_pro_woche">Stunden pro Woche:</label>
+        <input type="text" id="stunden_pro_woche" name="stunden_pro_woche">
+      
+        <label for="arbeitstage_pro_woche">Arbeitstage pro Woche:</label>
+        <input type="text" id="arbeitstage_pro_woche" name="arbeitstage_pro_woche">
+      
+        <label for="arbeitszeit_besondere_regelung">Besondere Regelung:</label>
+        <textarea id="arbeitszeit_besondere_regelung" name="arbeitszeit_besondere_regelung" rows="4"></textarea>
+      </fieldset>
+      
+      
+    <!-- Ferien -->
+    <fieldset>
+        <legend>Ferien:</legend>
+      
+        <label for="ferien_1_bildungsjahr">Ferien Wochen (1. Bildungsjahr):</label>
+        <input type="text" id="ferien_1_bildungsjahr" name="ferien_1_bildungsjahr">
+      
+        <label for="ferien_2_bildungsjahr">Ferien Wochen (2. Bildungsjahr):</label>
+        <input type="text" id="ferien_2_bildungsjahr" name="ferien_2_bildungsjahr">
+      
+        <label for="ferien_3_bildungsjahr">Ferien Wochen (3. Bildungsjahr):</label>
+        <input type="text" id="ferien_3_bildungsjahr" name="ferien_3_bildungsjahr">
+      
+        <label for="ferien_4_bildungsjahr">Ferien Wochen (4. Bildungsjahr):</label>
+        <input type="text" id="ferien_4_bildungsjahr" name="ferien_4_bildungsjahr">
+      </fieldset>
+      
+      
+    <!-- Berufsnotwendige Beschaffungen -->
+    <fieldset>
+        <legend>Berufsnotwendige Beschaffungen:</legend>
+      
+        <label for="braucht_beschaffungen">Benötigte Beschaffungen:</label>
+        <textarea id="braucht_beschaffungen" name="braucht_beschaffungen" rows="4"></textarea>
+      
+        <label for="uebernimmt_lehrbetrieb">Übernimmt Lehrbetrieb:</label>
+        <input type="checkbox" id="uebernimmt_lehrbetrieb" name="uebernimmt_lehrbetrieb" value="Lehrbetrieb">
+        <label for="uebernimmt_lehrbetrieb">Lehrbetrieb</label>
+      
+        <label for="uebernimmt_lernende">Übernimmt Lernende:</label>
+        <input type="checkbox" id="uebernimmt_lernende" name="uebernimmt_lernende" value="Lernende">
+        <label for="uebernimmt_lernende">Lernende</label>
+      </fieldset>
+      
+      
+    <!-- Versicherung -->
+    <fieldset>
+        <legend>Versicherung:</legend>
+      
+        <label for="nichtberufsunfallversicherung_lehrbetrieb">Nichtberufsunfallversicherung (Lehrbetrieb %):</label>
+        <input type="text" id="nichtberufsunfallversicherung_lehrbetrieb" name="nichtberufsunfallversicherung_lehrbetrieb">
+      
+        <label for="nichtberufsunfallversicherung_lernende">Nichtberufsunfallversicherung (Lernende %):</label>
+        <input type="text" id="nichtberufsunfallversicherung_lernende" name="nichtberufsunfallversicherung_lernende">
+      
+        <label for="krankentaggeldversicherung_vereinbart">Krankentaggeldversicherung (vereinbart):</label>
+        <input type="text" id="krankentaggeldversicherung_vereinbart" name="krankentaggeldversicherung_vereinbart">
+      
+        <label for="krankentaggeldversicherung_lehrbetrieb">Krankentaggeldversicherung (Lehrbetrieb %):</label>
+        <input type="text" id="krankentaggeldversicherung_lehrbetrieb" name="krankentaggeldversicherung_lehrbetrieb">
+      
+        <label for="krankentaggeldversicherung_lernende">Krankentaggeldversicherung (Lernende %):</label>
+        <input type="text" id="krankentaggeldversicherung_lernende" name="krankentaggeldversicherung_lernende">
+      </fieldset>
+      
+      
+    <!-- Besondere Regelung -->
+    <fieldset>
+        <legend>Besondere Regelung:</legend>
+      
+        <label for="besondere_regelung_text">Besondere Regelung:</label>
+        <textarea id="besondere_regelung_text" name="besondere_regelung_text" rows="4"></textarea>
+      </fieldset>
+      
+      
+    <!-- Unterschriften -->
+    <fieldset>
+        <legend>Unterschriften:</legend>
+      
+        <label for="lehrbetrieb_unterschrift">1. Lehrbetrieb:</label>
+        <input type="text" id="lehrbetrieb_unterschrift" name="lehrbetrieb_unterschrift">
+      
+        <label for="lernende_unterschrift">2. Lernende:</label>
+        <input type="text" id="lernende_unterschrift" name="lernende_unterschrift">
+      
+        <!-- Display the following section only if the person is not 18 years old -->
+        <div id="gesetzliche_vertretung_section">
+          <label for="gesetzliche_vertretung_unterschrift">3. Gesetzliche Vertretung:</label>
+          <input type="text" id="gesetzliche_vertretung_unterschrift" name="gesetzliche_vertretung_unterschrift">
+        </div>
+      
+        <label for="ort_unterschriften">4. Ort:</label>
+        <input type="text" id="ort_unterschriften" name="ort_unterschriften">
+      
+        <label for="datum_unterschriften">5. Datum:</label>
+        <input type="date" id="datum_unterschriften" name="datum_unterschriften">
+      </fieldset>
+      
+      <!-- Genehmigung -->
+    <fieldset>
+        <legend>Genehmigung:</legend>
+      
+        <label for="ort_genehmigung">1. Ort:</label>
+        <input type="text" id="ort_genehmigung" name="ort_genehmigung">
+      
+        <label for="datum_genehmigung">2. Datum:</label>
+        <input type="date" id="datum_genehmigung" name="datum_genehmigung">
+      
+        <label for="stempel_genehmigung">3. Stempel:</label>
+        <input type="text" id="stempel_genehmigung" name="stempel_genehmigung">
+      </fieldset>
+      <button id="validate">Validate</button>
 </body>
-
 </html>
