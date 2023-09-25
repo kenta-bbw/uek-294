@@ -4,27 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formular mit automatischer Ortseingabe</title>
+    <link rel="stylesheet" href="styles.css">
     <script type="text/JavaScript" src="script.js" defer></script>
 </head>
 <body>
-    <h1>Formular</h1>
-    <form id="myForm">
-        <label for="vorname">Vorname:</label>
-        <input type="text" id="vorname" name="vorname" required><br><br>
+    <div class="container">
+        <h1>Formular</h1>
+        <form id="myForm">
+            <div class="form-group">
+                <label for="vorname">Vorname:</label>
+                <input type="text" id="vorname" name="vorname" required>
+            </div>
 
-        <label for="nachname">Nachname:</label>
-        <input type="text" id="nachname" name="nachname" required><br><br>
+            <div class="form-group">
+                <label for="nachname">Nachname:</label>
+                <input type="text" id="nachname" name="nachname" required>
+            </div>
 
-        <label for="strasse">Strasse:</label>
-        <input type="text" id="strasse" name="strasse" required><br><br>
+            <div class="form-group">
+                <label for="strasse">Strasse:</label>
+                <input type="text" id="strasse" name="strasse" required>
+            </div>
 
-        <label for="plz">Postleitzahl:</label>
-        <input type="text" id="plz" name="plz" required><br><br>
+            <div class="form-group">
+                <label for="plz">Postleitzahl:</label>
+                <input type="text" id="plz" name="plz" required>
+            </div>
 
-        <label for="ort">Ort:</label>
-        <input type="text" id="ort" name="ort" required><br><br>
+            <div class="form-group">
+                <label for="ort">Ort:</label>
+                <input type="text" id="ort" name="ort" required>
+            </div>
 
-        <input type="submit" value="Absenden">
-    </form>
+            <div class="form-group">
+                <input type="submit" value="Absenden">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
