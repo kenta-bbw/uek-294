@@ -1,0 +1,6 @@
+version: '3'
+services:
+  course-zli-m294-project:
+    image: ghcr.io/openscript/course-zli-m294-project:latest
+    ports:
+      - "80:3000"
