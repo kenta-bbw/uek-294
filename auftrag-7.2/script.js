@@ -1,6 +1,53 @@
 document.addEventListener("DOMContentLoaded", function () {
     const commentForm = document.getElementById("commentForm");
     const commentsContainer = document.getElementById("comments");
+    const apiUrl = "http://10.71.4.34/comments";
+    const tokenUrl = "http://10.71.4.34/challenges/1";
+    let accessToken = null; // Store the access token
+
+    // Function to fetch access token
+    function fetchAccessToken() {
+        fetch(tokenUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                accessToken = data.token;
+                setTimeout(() => {
+                    accessToken = null; // Clear the token after 3 seconds
+                }, 3000);
+            })
+            .catch((error) => {
+                console.error("Error fetching access token:", error);
+            });
+    }
+
+    // Function to send comment with access token
+    function sendCommentWithToken(comment) {
+        if (!accessToken) {
+            alert("Access token expired. Please try again.");
+            return;
+        }
+
+        fetch(apiUrl, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${accessToken}`,
+            },
+            body: JSON.stringify(comment),
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                displayComment(data); 
+            })
+            .catch((error) => {
+                console.error("Error sending comment:", error);
+            });
+    }
 
     commentForm.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -26,10 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
             message: message,
         };
 
-        // Display the comment
-        displayComment(comment);
+        fetchAccessToken();
+        sendCommentWithToken(comment);
 
-        // Clear input fields
         usernameInput.value = "";
         messageInput.value = "";
     });
@@ -41,8 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
             <strong>${comment.username}:</strong>
             <p>${comment.message}</p>
         `;
-
-        // Prepend the comment to the top of the comments container
-        commentsContainer.insertBefore(commentDiv, commentsContainer.firstChild);
+        commentsContainer.appendChild(commentDiv);
     }
 });

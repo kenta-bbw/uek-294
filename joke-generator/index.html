@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Joke Generator</title>
+</head>
+<body>
+    <header>
+        <h1>Joke Generator</h1>
+    </header>
+    
+    <main>
+        <section class="joke-form">
+            <form id="jokeForm">
+                <h2>Choose Flags to Blacklist</h2>
+                <div id="flags">
+                    <div class="flag-item">
+                        <input type="checkbox" id="nsfw" name="flags" value="nsfw">
+                        <label for="nsfw">NSFW</label>
+                    </div>
+                    <div class="flag-item">
+                        <input type="checkbox" id="religious" name="flags" value="religious">
+                        <label for="religious">Religious</label>
+                    </div>
+                    <div class="flag-item">
+                        <input type="checkbox" id="political" name="flags" value="political">
+                        <label for="political">Political</label>
+                    </div>
+                    <div class="flag-item">
+                        <input type="checkbox" id="racist" name="flags" value="racist">
+                        <label for="racist">Racist</label>
+                    </div>
+                    <div class="flag-item">
+                        <input type="checkbox" id="sexist" name="flags" value="sexist">
+                        <label for="sexist">Sexist</label>
+                    </div>
+                    <div class="flag-item">
+                        <input type="checkbox" id="explicit" name="flags" value="explicit">
+                        <label for="explicit">Explicit</label>
+                    </div>
+                </div>
+                <button type="submit">Get Joke</button>
+            </form>
+        </section>
+
+        <section class="joke-display">
+            <div id="jokeContainer">
+                <!-- Jokes will be displayed here -->
+            </div>
+            <div id="timer">
+                <!-- Timer will be displayed here -->
+            </div>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
