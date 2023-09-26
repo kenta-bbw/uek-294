@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Comment Form</title>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>Comment Form</h1>
+        </div>
+        <div id="comments" class="chat-messages">
+            <!-- Comment messages will be displayed here -->
+        </div>
+        <form id="commentForm" class="chat-input">
+            <input type="text" id="username" name="username" placeholder="Username (3-16 characters)" minlength="3" maxlength="16" required>
+            <textarea id="message" name="message" placeholder="Message (3-300 characters)" minlength="3" maxlength="300" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
