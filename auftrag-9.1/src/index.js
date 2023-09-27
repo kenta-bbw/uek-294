@@ -47,14 +47,16 @@ async function fetchTasks() {
 }
        
 function searchTasksByTitle() {
-const query = searchQueryInput.value.toLowerCase();
-const filteredTasks= query
-    ? tasks.filter(tasks =>
-        (tasks.title && tasks.title.toLowerCase().includes(query))
-    )
-    : tasks;
-renderTaskList(filteredTasks);
-}
+    const query = searchQueryInput.value.toLowerCase();
+    const tasks = query
+      ? tasks.filter(task =>
+          (task.title && task.title.toLowerCase().includes(query))
+        )
+      : tasks;
+
+    renderTaskList(tasks);
+  }
+  
 
 async function deleteTask(taskId) {
     console.log("deleting..")
