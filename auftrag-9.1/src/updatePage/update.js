@@ -3,6 +3,7 @@ const createFrom = document.getElementById('myForm');
 document.addEventListener("DOMContentLoaded", () => {
     let titleElement = document.getElementById('title');
     let status = document.getElementById('status').checked;
+    let checkbox = document.getElementById('status');
     let title = titleElement.value;
     const urlParams = new URLSearchParams(window.location.search);
     const taskId = urlParams.get('taskId');
@@ -11,8 +12,14 @@ document.addEventListener("DOMContentLoaded", () => {
             console.log(taskId); 
             const response = await fetch(`http://localhost/task/${taskId}`);
             const data = await response.json();
-            console.log(status)
+            console.log(data.completed)
             titleElement.value = data.title;
+            if (data.completed == false) {
+                checkbox.checked = false; 
+              } else if (data.completed == true) {
+                checkbox.checked = true;  
+              }
+            
         } catch (error) {
             console.error('Error fetching tasks:', error);
         }

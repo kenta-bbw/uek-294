@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   createFrom.addEventListener("submit", async (event) => {
     event.preventDefault();
     const titleElement = document.getElementById('title');
-    const status = document.querySelectorAll('input[name="completed"]:checked');
+    let status = document.getElementById('status').checked;
     const title = titleElement.value;
     const taskData = {
         title: title,

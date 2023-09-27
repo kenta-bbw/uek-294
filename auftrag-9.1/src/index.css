@@ -93,3 +93,7 @@ li {
 .updateBtn:hover {
   background-color: #234fc8;
 }
+
+.completed{
+  text-decoration: line-through;
+}

@@ -10,14 +10,14 @@ function renderTasksList(tasksToRender) {
 
     tasksToRender.forEach(task => {
         const listItem = document.createElement("li");
-        listItem.textContent = `${task.title}`;
+        listItem.textContent = `${task.title} `;
         const updateButton = document.createElement("button");
         const deleteButton = document.createElement("button");
         const buttons = document.createElement("div");
         updateButton.textContent = "Update";
         deleteButton.textContent = "Delete";
-        deleteButton.addEventListener("click", () => deleteTask(task.id));
-        updateButton.addEventListener("click", () => {    const taskId = task.id; updateTask(taskId);});     
+        deleteButton.addEventListener("click", () => {  const taskId = task.id; deleteTask(taskId)});
+        updateButton.addEventListener("click", () => {  const taskId = task.id; updateTask(taskId);});     
         updateButton.classList.add('updateBtn')
         deleteButton.classList.add('deleteBtn')
         buttons.classList.add('buttons')
@@ -25,6 +25,13 @@ function renderTasksList(tasksToRender) {
         buttons.appendChild(deleteButton);
         listItem.appendChild(buttons);
         taskList.appendChild(listItem);
+        async function checkStatus (){
+            console.log(task.completed)
+            if (task.completed == true){
+                listItem.classList.add('completed')
+            }
+        }
+        checkStatus();
     });
 }
 async function fetchTasks() {
@@ -33,6 +40,7 @@ async function fetchTasks() {
         const data = await response.json();
         tasks.push(...data);
         renderTasksList(tasks);
+        console.log(data)
     } catch (error) {
         console.error('Error fetching tasks:', error);
     }
@@ -48,16 +56,14 @@ const filteredTasks= query
 renderTaskList(filteredTasks);
 }
 
-async function deleteTask(tasksId) {
+async function deleteTask(taskId) {
     console.log("deleting..")
 try {
-    const response = await fetch(`http://localhost/task/${tasksId}`, {
+    const response = await fetch(`http://localhost/task/${taskId}`, {
         method: 'DELETE'
     });
 
-    if (response.ok) {
-        tasks = tasks.filter(task => task.id !== taskId);
-        renderTasksList(tasks);        
+    if (response.ok) {    
         console.log('Task deleted successfully');
     } else {
         console.error('Failed to delete tasks');
@@ -69,7 +75,6 @@ try {
 async function updateTask(taskId) {
     window.location.replace(`http://localhost:5500/updatePage/update.html?taskId=${taskId}`);
 }
-
 
 searchButton.addEventListener("click", searchTasksByTitle);
 fetchTasks();
